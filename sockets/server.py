@@ -47,7 +47,7 @@ while True:
 
             clients[client_socket] = user_message
 
-            print(f"Accepted new connection from {client_address[0]}:{client_address[1]} username:{user_message['data'].deconde('utf-8')}")
+            print(f"Accepted new connection from {client_address[0]}:{client_address[1]} username:{user_message['data'].decode('utf-8')}")
 
         else: #Case for clients
             message = receive_message(notified_socket)
@@ -65,6 +65,6 @@ while True:
                 if client_socket != notified_socket:
                     client_socket.send(user['header'] + user['data'] + message['header'] + message['data'])
 
-        for notified_socket in exception_sockets:
-            socket_list.remove(notified_socket)
-            del clients[notified_socket]
+    for notified_socket in exception_sockets:
+        socket_list.remove(notified_socket)
+        del clients[notified_socket]

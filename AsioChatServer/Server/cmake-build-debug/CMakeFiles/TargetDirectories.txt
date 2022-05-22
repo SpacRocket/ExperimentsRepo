@@ -1,0 +1,3 @@
+/Users/spacrocket/Coding/ExperimentsRepo/AsioChatServer/Server/cmake-build-debug/CMakeFiles/Server.dir
+/Users/spacrocket/Coding/ExperimentsRepo/AsioChatServer/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/spacrocket/Coding/ExperimentsRepo/AsioChatServer/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir

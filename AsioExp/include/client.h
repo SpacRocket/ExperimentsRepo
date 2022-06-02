@@ -9,10 +9,22 @@
 
 #include <iostream>
 #include <olc_net.h>
+#include <net_client.h>
 
 enum class CustomMsgTypes : uint32_t{
     FireBullet,
     MovePlayer
+};
+
+class CustomClient : public client_interface<CustomMsgTypes>{
+public:
+    bool FireBullet(float x, float y)
+    {
+        message<CustomMsgTypes> msg;
+        msg.header.id = CustomMsgTypes::FireBullet;
+        msg << x << y;
+        Send(msg);
+    }
 };
 
 int main()

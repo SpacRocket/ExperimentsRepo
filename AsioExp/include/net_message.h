@@ -35,7 +35,7 @@ public:
 
         msg.header.size = msg.size();
 
-        return msg;
+        return reinterpret_cast<std::ostream &>(msg);
     }
 
     template<typename DataType>
@@ -54,7 +54,6 @@ public:
 
 template<typename T>
 class connection;
-
 template<typename T>
 struct owned_message{
     std::shared_ptr<connection<T>> remote = nullptr;
